@@ -1,7 +1,6 @@
 FROM nikolaik/python-nodejs:python3.12-nodejs21-slim AS builder
 
-ENV NODE_WORKDIR /app
-WORKDIR $NODE_WORKDIR
+WORKDIR /app
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN apt-get update && \
