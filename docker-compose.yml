@@ -5,6 +5,8 @@ services:
         build:
             context: .
         env_file: .env
+        volumes:
+            - ./helpers/tdlib/data:/app/helpers/tdlib/data
         restart: always
         logging:
             driver: "json-file"
